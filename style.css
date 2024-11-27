@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  padding:0 1rem;
+}
+h1 {
+  font-size: 3.5rem;
+}
+h2{
+  font-size: 2.5rem;
+}
+p{
+  font-size: 1rem;
+}
+nav,
+header,
+main {
+  max-width: 1200px;
+  margin: auto;
+}
+
+section {
+  margin: 3rem auto;
+}
+/* navbar styling */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+
+.ul-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.navbar .btn_style {
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  background-color: #fff;
+  color: #000;
+}
+/* header styling && making container */
+
+.header,
+.make_things {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  letter-spacing: 0.02rem;
+}
+.header {
+  margin-bottom: 5rem;
+}
+.booking_img{
+  flex:1;
+}
+.booking_img figure img{
+  max-height: 450px;
+}
+.make_things {
+  background-color: #f3f3f3;
+  border-radius: 1rem;
+}
+
+
+.booking_container,
+.making_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.booking_container *,
+.making_container * {
+  margin-bottom: 0.8rem;
+}
+
+.btn_style {
+  background-color: #231f20;
+  color: #fff;
+  outline: none;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+}
+
+/* websites section  */
+
+.websites {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 3.5rem auto;
+}
+/* services section && case study section */
+.service_heading,
+.case_study_heading {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.colored {
+  background-color: #b9ff66;
+  border-radius: 0.5rem;
+  padding: 2px 4px;
+}
+.light {
+  background-color: #fff;
+  color: #231f20;
+}
+.cards_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  max-height: 200px;
+  box-shadow:  0px 0px 5px 7px rgba(0,0,0,0.7);
+  
+}
+.black_card {
+  background-color: #231f20;
+  color: #fff;
+}
+.card_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card figure {
+  align-self: center;
+}
+.circle {
+  padding: 0.3rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+/* footer styling  */
+.footer{
+  max-width:1200px;
+}
+.container_of_footer{
+  /* display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr); */
+  gap: 1rem;
+  justify-content: space-between;
+  margin: 3.5rem auto;
+  flex-wrap: wrap;
+  background-color: #231f20;
+  color: #fff;
+  border-radius: 1.5rem;
+}
+.footer_container {
+  border-right: #fff 0.1px solid;
+
+}
+.footer_container p {
+  padding: 1rem 0.5rem;
+}
+.last {
+  border: none;
+}
+
+.footer_container a.learnmore_btn {
+  color: #b9ff66;
+ 
+}
+
+/* media queries  */
+
+
+/* small phone */ 
+@media (max-width: 599px) { 
+
+  .cards_container { 
+      grid-template-columns: 
+          repeat(1, 1fr); 
+      grid-template-rows: 
+          repeat(4, 1fr); 
+  } 
+
+  
+} 
+
+
+/* big screen phones */ 
+@media (min-width: 600px) and (max-width: 767px) { 
+ 
+  .cards_container { 
+      grid-template-columns: 
+          repeat(1, 1fr); 
+      grid-template-rows: 
+          repeat(4, 1fr); 
+  } 
+
+  
+} 
+
+/* labtops */ 
+@media (min-width: 768px) and (max-width: 1024px) { 
+  .cards_container { 
+    grid-template-columns: 
+        repeat(1, 1fr); 
+    grid-template-rows: 
+        repeat(4, 1fr); 
+} 
+
+} 
+
+/* comp */ 
+@media (min-width: 1025px) and (max-width: 1280px) { 
+  
+
+} 
+
+/* screens */ 
+@media (min-width: 1281px) and (max-width: 1440px) { 
+  
+  
+
+} 
+
+/* screens */ 
+@media (min-width: 1921px) { 
+  
+}
