@@ -68,10 +68,10 @@ a {
 .header {
   margin-bottom: 5rem;
 }
-.booking_img {
+.booking_img , .making_img{
   flex: 1;
 }
-.booking_img figure img {
+.booking_img figure img ,.making_img figure img {
   max-height: 450px;
 }
 .make_things {
@@ -183,13 +183,6 @@ a {
   margin: auto;
 }
 
-/*
-  item 2rem item 2rem item = 100%
-
-  3 * item + 4rem = 100%
-  item = 33.33% - 1.33rem
-*/
-
 .container_of_footer {
   display: flex;
   gap: 2rem;
@@ -217,38 +210,50 @@ a {
 
 /* media queries  */
 
-/* small phone */
-@media (max-width: 599px) {
+/* small screens */
+@media (min-width: 300px) and (max-width: 767px) {
   .cards_container {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(4, 1fr);
   }
-}
+  .ul-container{
+    display: none;
+  }
+  .container_of_footer{
+    flex-direction: column;
+    
+  }
+  .footer_container{
+  border-right: none;
+border-bottom: #fff 0.1px solid;
+flex: 1;
+padding: 1rem 0;
+  }
+  .last {
+    border: none;
+  }
+  .booking_img figure img , .making_img figure img{
+    max-height: 250px;
+  }
+  div .btn_style , h2{
+    padding:1rem;
+    display: block;
+    width: 100%;
+    margin: auto;
+    /* font-size: 1.5rem; */
+  }
+  div .btn_style , p{
+    font-size: 1.5rem;
+  }
 
-/* big screen phones */
-@media (min-width: 600px) and (max-width: 767px) {
-  .cards_container {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+  div{
+    text-align: center;
+  }
+  h3>span{
+    display: block;
+  }
+  .card{
+    max-height: 300px;
   }
 }
 
-/* labtops */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .cards_container {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-  }
-}
-
-/* comp */
-@media (min-width: 1025px) and (max-width: 1280px) {
-}
-
-/* screens */
-@media (min-width: 1281px) and (max-width: 1440px) {
-}
-
-/* screens */
-@media (min-width: 1921px) {
-}
