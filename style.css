@@ -6,15 +6,16 @@
 
 body {
   font-size: 1rem;
-  padding:0 1rem;
+  padding: 0 1rem;
+  font-family: "Courier New", Courier, monospace;
 }
 h1 {
   font-size: 3.5rem;
 }
-h2{
+h2 {
   font-size: 2.5rem;
 }
-p{
+p {
   font-size: 1rem;
 }
 nav,
@@ -67,17 +68,16 @@ a {
 .header {
   margin-bottom: 5rem;
 }
-.booking_img{
-  flex:1;
+.booking_img {
+  flex: 1;
 }
-.booking_img figure img{
+.booking_img figure img {
   max-height: 450px;
 }
 .make_things {
   background-color: #f3f3f3;
   border-radius: 1rem;
 }
-
 
 .booking_container,
 .making_container {
@@ -88,6 +88,10 @@ a {
   flex-wrap: wrap;
   flex: 1;
 }
+.making_container {
+  padding: 2rem;
+}
+
 .booking_container *,
 .making_container * {
   margin-bottom: 0.8rem;
@@ -105,11 +109,14 @@ a {
 
 .websites {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.5;
   flex-wrap: wrap;
   margin: 3.5rem auto;
+}
+.website_container{
+  flex-grow: 1;
 }
 /* services section && case study section */
 .service_heading,
@@ -126,6 +133,7 @@ a {
   background-color: #b9ff66;
   border-radius: 0.5rem;
   padding: 2px 4px;
+  
 }
 .light {
   background-color: #fff;
@@ -147,8 +155,7 @@ a {
   flex-wrap: wrap;
   border: 1px solid black;
   max-height: 200px;
-  box-shadow:  0px 0px 5px 7px rgba(0,0,0,0.7);
-  
+  box-shadow: 0px 0px 5px 7px rgba(0, 0, 0, 0.7);
 }
 .black_card {
   background-color: #231f20;
@@ -171,24 +178,31 @@ a {
 }
 
 /* footer styling  */
-.footer{
-  max-width:1200px;
+.footer {
+  max-width: 1200px;
+  margin: auto;
 }
-.container_of_footer{
-  /* display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr); */
-  gap: 1rem;
+
+/*
+  item 2rem item 2rem item = 100%
+
+  3 * item + 4rem = 100%
+  item = 33.33% - 1.33rem
+*/
+
+.container_of_footer {
+  display: flex;
+  gap: 2rem;
   justify-content: space-between;
-  margin: 3.5rem auto;
   flex-wrap: wrap;
   background-color: #231f20;
   color: #fff;
   border-radius: 1.5rem;
+  padding: 2rem;
 }
 .footer_container {
   border-right: #fff 0.1px solid;
-
+  flex: 1;
 }
 .footer_container p {
   padding: 1rem 0.5rem;
@@ -199,64 +213,42 @@ a {
 
 .footer_container a.learnmore_btn {
   color: #b9ff66;
- 
 }
 
 /* media queries  */
 
+/* small phone */
+@media (max-width: 599px) {
+  .cards_container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
 
-/* small phone */ 
-@media (max-width: 599px) { 
+/* big screen phones */
+@media (min-width: 600px) and (max-width: 767px) {
+  .cards_container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
 
-  .cards_container { 
-      grid-template-columns: 
-          repeat(1, 1fr); 
-      grid-template-rows: 
-          repeat(4, 1fr); 
-  } 
+/* labtops */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cards_container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
 
-  
-} 
+/* comp */
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
 
+/* screens */
+@media (min-width: 1281px) and (max-width: 1440px) {
+}
 
-/* big screen phones */ 
-@media (min-width: 600px) and (max-width: 767px) { 
- 
-  .cards_container { 
-      grid-template-columns: 
-          repeat(1, 1fr); 
-      grid-template-rows: 
-          repeat(4, 1fr); 
-  } 
-
-  
-} 
-
-/* labtops */ 
-@media (min-width: 768px) and (max-width: 1024px) { 
-  .cards_container { 
-    grid-template-columns: 
-        repeat(1, 1fr); 
-    grid-template-rows: 
-        repeat(4, 1fr); 
-} 
-
-} 
-
-/* comp */ 
-@media (min-width: 1025px) and (max-width: 1280px) { 
-  
-
-} 
-
-/* screens */ 
-@media (min-width: 1281px) and (max-width: 1440px) { 
-  
-  
-
-} 
-
-/* screens */ 
-@media (min-width: 1921px) { 
-  
+/* screens */
+@media (min-width: 1921px) {
 }
